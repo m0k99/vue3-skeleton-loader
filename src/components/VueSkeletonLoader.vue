@@ -34,7 +34,7 @@ const props = defineProps({
   highlightColor: {
     type: String as PropType<SkeletonLoaderProps['highlightColor']>,
     required: false,
-    default: 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0))'
+    default: '#FFFFFF66'
   },
   borderRadius: {
     type: [String, Number] as PropType<SkeletonLoaderProps['borderRadius']>,
@@ -117,4 +117,3 @@ if (bonesCount && bonesCount > 0) {
     </VueSkeletonLoaderBone>
   </div>
 </template>
-
