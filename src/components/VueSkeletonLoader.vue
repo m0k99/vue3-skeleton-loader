@@ -1,0 +1,120 @@
+<script setup lang="ts">
+import {PropType, reactive , StyleValue} from "vue";
+import VueSkeletonLoaderBone from "./VueSkeletonLoaderBone.vue";
+import {computeComponents} from "@/util";
+import {SkeletonLoaderProps} from "@/types/SkeletonProps";
+import {makeStyle} from "@/composables/style";
+
+const props = defineProps({
+  loading: {
+    type: Boolean as PropType<SkeletonLoaderProps['loading']>,
+    required: false,
+    default: true
+  },
+  type: {
+    type: String as PropType<SkeletonLoaderProps['type']>,
+    required: false,
+    default: 'text'
+  },
+  animation: {
+    type: String as PropType<SkeletonLoaderProps['animation']>,
+    required: false,
+    default: 'wave'
+  },
+  duration: {
+    type: Number as PropType<SkeletonLoaderProps['duration']>,
+    required: false,
+    default: 1.5
+  },
+  baseColor: {
+    type: String as PropType<SkeletonLoaderProps['baseColor']>,
+    required: false,
+    default: '#0000001E'
+  },
+  highlightColor: {
+    type: String as PropType<SkeletonLoaderProps['highlightColor']>,
+    required: false,
+    default: 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0))'
+  },
+  borderRadius: {
+    type: [String, Number] as PropType<SkeletonLoaderProps['borderRadius']>,
+    required: false,
+    default: ''
+  },
+  height: {
+    type: [String, Number] as PropType<SkeletonLoaderProps['height']>,
+    required: false,
+    default: ''
+  },
+  width: {
+    type: [String, Number] as PropType<SkeletonLoaderProps['width']>,
+    required: false,
+    default: ''
+  },
+  direction: {
+    type: String as PropType<SkeletonLoaderProps['direction']>,
+    required: false,
+    default: 'ltr'
+  },
+  containerStyle: {
+    type: Object as PropType<SkeletonLoaderProps['containerStyle']>,
+    required: false,
+    default: () => ({} as StyleValue),
+  },
+  style: {
+    type: Object as PropType<SkeletonLoaderProps['style']>,
+    required: false,
+    default: () => ({})
+  },
+  className: {
+    type: String as PropType<SkeletonLoaderProps['class']>,
+    required: false,
+    default: ''
+  }
+})
+
+
+const {skeletonName, bonesCount} = computeComponents(props.type)
+
+let styles = reactive({})
+
+if (bonesCount && bonesCount > 0) {
+
+  const boneProps = {
+    type: skeletonName,
+    duration: props.duration,
+    baseColor: props.baseColor,
+    highlightColor: props.highlightColor,
+    borderRadius: props.borderRadius,
+    height: props.height,
+    width: props.width
+  }
+  styles = makeStyle(boneProps)
+
+}
+
+</script>
+
+<template>
+  <div class="vue-skeleton-loader" :style="containerStyle">
+    <VueSkeletonLoaderBone
+      v-if="loading"
+      v-for="index in bonesCount"
+      :key="index"
+      :style="style"
+      :class="[
+        `v-skeleton-loader-${skeletonName}`,
+        {
+          'animation-disabled': !animation,
+          'rtl-direction': direction === 'rtl'
+        },
+        animation,
+        className
+      ]"
+      :styles="styles"
+    >
+      <slot></slot>
+    </VueSkeletonLoaderBone>
+  </div>
+</template>
+
