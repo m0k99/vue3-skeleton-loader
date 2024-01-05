@@ -36,6 +36,7 @@ onMounted(() => {
   background: var(--baseColor);
   border-radius: var(--borderRadius);
   margin-bottom: var(--marginBottom);
+
   &.animation-disabled {
     &::after {
       animation: paused;
@@ -84,11 +85,15 @@ onMounted(() => {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      animation: loading var(--duration) infinite;
-      background: var(--highlightColor);
-      transform: translateX(-100%);
+      bottom: 0;
+      right: 0;
+      animation: loading var(--duration) linear infinite;
+      background-image: linear-gradient(
+          90deg,
+          transparent,
+          var(--highlightColor),
+          transparent
+      );
       z-index: 1;
     }
 
@@ -108,6 +113,9 @@ onMounted(() => {
 
 
 @keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
   100% {
     transform: translateX(100%);
   }
