@@ -4,7 +4,7 @@
         Create visually appealing loading skeletons with animations that seamlessly integrate with your app's aesthetics
         and provide a delightful user experience.
     </p>
-    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDVlanZiOGF3MWhkYXhtYXYzNms2MG9wZXBmdzd5MHl5a25na29vYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wNbcAM4P78WLJpDYZL/giphy.gif" alt="Animated GIF">
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDVlanZiOGF3MWhkYXhtYXYzNms2MG9wZXBmdzd5MHl5a25na29vYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wNbcAM4P78WLJpDYZL/giphy.gif" alt="Animated GIF" style="style="width: 500px; height: 528.634px; left: 0px; top: 0px; opacity: 1;">
 </div>
 
 ## Basic Usage
