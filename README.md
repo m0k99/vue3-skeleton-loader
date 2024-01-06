@@ -1,9 +1,10 @@
-# Vue Content Skeleton Loader
 <div align="center">
     <h1 align="center">Vue Content Skeleton Loader</h1>
     <p align="center">
-        Make beautiful, animated loading skeletons that automatically adapt to your app.
+        Create visually appealing loading skeletons with animations that seamlessly integrate with your app's aesthetics
+        and provide a delightful user experience.
     </p>
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA0Mjc0Mzh0cGU0c3RqYmt4ZXpxNzM0c3ppbzAycDJqZjZxZ29hYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WHayPi9eE3HW8pz7xa/giphy.gif" alt="Animated GIF" style="style="width: 500px; height: 528.634px; left: 0px; top: 0px; opacity: 1;">
 </div>
 
 ## Basic Usage
@@ -11,7 +12,6 @@
 Install via one of:
 
 ```bash
-yarn add vue-content-loading-skeleton
 npm install vue-content-loading-skeleton
 ```
 
@@ -22,11 +22,14 @@ import 'vue-content-skeleton-loader/dist/style.css';
 <VueSkeletonLoader type="text"></VueSkeletonLoader>
 ```
 
-## Principles
+## Guid
+
+Skeleton loader provides a simple solution to provide loading variables in your application. \
+It prepares the user for content while data is fetched from the server or loaded asynchronously.
 
 ## Props
 
-### `Skeleton` only
+### `Skeleton`
 
 <table>
     <thead>
@@ -89,7 +92,6 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
             <td align="center">
                 <code>wave</code>
-                <code>fade</code>
             </td>
             <td align="center">
                 <code>wave</code>
@@ -99,7 +101,8 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                Animation is a string, if it is empty, no animation will be shown.
+                The animation parameter is a string; if left empty, no animation will be displayed. 
+                To showcase a specific animation, provide its name and globally define the corresponding keyframes.
             </td>
         </tr>
         <tr>
@@ -234,7 +237,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
         </tr>
         <tr>
             <td>
-                style
+                skeleton-style
             </td>
             <td align="center">
                <code>-</code>
@@ -247,7 +250,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an object that pass to skeleton to set custom style.
+                A custom style for individual skeleton elements.
             </td>
         </tr>
         <tr>
@@ -265,27 +268,13 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an string that pass to skeleton to append class name.
+                A custom class name for individual skeleton elements is used alongside default class names 
+                <code>`v-skeleton-loader-${type}`</code> and <code>'vue-skeleton-loader-bone'</code>.
             </td>
         </tr>
-    </tbody>
-</table>
-
-### `Skeleton Container`
-
-<table>
-    <thead>
-        <tr>
-            <th>Prop</th>
-            <th>Values</th>
-            <th>Default</th>
-            <th>Type</th>
-        </tr>
-    </thead>
-    <tbody>
         <tr>
             <td>
-                container-style
+                style
             </td>
             <td align="center">
                 -
@@ -298,7 +287,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an object that pass to skeleton container to set custom style.
+                A custom style for the <code>div</code> that wraps the individual skeletal elements.
             </td>
         </tr>
         <tr>
@@ -316,8 +305,14 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an string that pass to skeleton container to append class name.
+               A custom class name for the <code>div</code> that wraps the individual skeletal elements 
+               which are used alongside the default class <code>'vue-skeleton-loader'</code>
             </td>
         </tr>
     </tbody>
 </table>
+
+
+## Example
+
+<VueSkeletonLoader type="text"></VueSkeletonLoader>
