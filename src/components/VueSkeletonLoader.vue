@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {PropType, reactive , StyleValue} from "vue";
+import {PropType, reactive} from "vue";
 import VueSkeletonLoaderBone from "./VueSkeletonLoaderBone.vue";
 import {computeComponents} from "@/util";
 import {SkeletonLoaderProps} from "@/types/SkeletonProps";
@@ -56,18 +56,13 @@ const props = defineProps({
     required: false,
     default: 'ltr'
   },
-  containerStyle: {
-    type: Object as PropType<SkeletonLoaderProps['containerStyle']>,
-    required: false,
-    default: () => ({} as StyleValue),
-  },
-  style: {
-    type: Object as PropType<SkeletonLoaderProps['style']>,
+  skeletonStyle: {
+    type: Object as PropType<SkeletonLoaderProps['skeletonStyle']>,
     required: false,
     default: () => ({})
   },
-  className: {
-    type: String as PropType<SkeletonLoaderProps['class']>,
+  skeletonClassName: {
+    type: String as PropType<SkeletonLoaderProps['skeletonClassName']>,
     required: false,
     default: ''
   }
@@ -87,7 +82,8 @@ if (bonesCount && bonesCount > 0) {
     highlightColor: props.highlightColor,
     borderRadius: props.borderRadius,
     height: props.height,
-    width: props.width
+    width: props.width,
+    animation: props.animation
   }
   styles = makeStyle(boneProps)
 
@@ -96,12 +92,12 @@ if (bonesCount && bonesCount > 0) {
 </script>
 
 <template>
-  <div class="vue-skeleton-loader" :style="containerStyle">
+  <div class="vue-skeleton-loader">
     <VueSkeletonLoaderBone
       v-if="loading"
       v-for="index in bonesCount"
       :key="index"
-      :style="style"
+      :style="skeletonStyle"
       :class="[
         `v-skeleton-loader-${skeletonName}`,
         {
@@ -109,7 +105,7 @@ if (bonesCount && bonesCount > 0) {
           'rtl-direction': direction === 'rtl'
         },
         animation,
-        className
+        skeletonClassName
       ]"
       :styles="styles"
     >

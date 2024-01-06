@@ -35,7 +35,7 @@ onMounted(() => {
   overflow: hidden;
   background: var(--baseColor);
   border-radius: var(--borderRadius);
-  margin-bottom: var(--marginBottom);
+  margin: var(--margin);
 
   &.animation-disabled {
     &::after {
@@ -78,41 +78,38 @@ onMounted(() => {
     width: var(--width);
     display: block;
   }
+  &::after {
 
-  &.wave {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      animation: loading var(--duration) linear infinite;
-      background-image: linear-gradient(
-          90deg,
-          transparent,
-          var(--highlightColor),
-          transparent
-      );
-      z-index: 1;
-    }
-
-    &.rtl-direction {
-      &::after {
-        right: 0;
-        animation: rtl-loading var(--duration) infinite;
-        transform: translateX(100%);
-      }
-    }
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation-name: var(--animation);
+    animation-duration: var(--duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: linear-gradient(
+        90deg,
+        transparent,
+        var(--highlightColor),
+        transparent
+    );
+    z-index: 1;
   }
-
-  &.fade {
-    animation: fade var(--duration) ease-in-out infinite alternate;;
+  &.wave::after{
+    animation-name: wave;
+    animation-direction: normal;
+  }
+  &.rtl-direction::after{
+    animation-name: wave;
+    animation-direction: reverse;
   }
 }
 
 
-@keyframes loading {
+@keyframes wave {
   0% {
     transform: translateX(-100%);
   }
@@ -120,20 +117,4 @@ onMounted(() => {
     transform: translateX(100%);
   }
 }
-
-@keyframes rtl-loading {
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.4;
-  }
-}
-
 </style>
