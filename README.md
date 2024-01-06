@@ -313,6 +313,54 @@ It prepares the user for content while data is fetched from the server or loaded
 </table>
 
 
-## Example
+## Troubleshooting
 
-<VueSkeletonLoader type="text"></VueSkeletonLoader>
+### Skeleton gets width 0 when parent display is <code>flex</code>
+In the example below, the issue is demonstrated. To resolve it, you can either set the style <code>flex:1</code> for 
+<code>VueSkeletonLoader</code> or enclose the skeleton within a div element, as shown below:
+```vue
+<script setup lang="ts">
+  import VueSkeletonLoader from 'vue-content-skeleton-loader';
+  import 'vue-content-skeleton-loader/dist/style.css';
+</script>
+<template>
+  <div class="container">
+    <div class="avatar-container">
+      <VueSkeletonLoader type="avatar"/>
+      <div>
+        <VueSkeletonLoader type="text" width="100px" height="10px"/>
+        <VueSkeletonLoader type="text" width="70px" height="6px"/>
+      </div>
+    </div>
+    <VueSkeletonLoader type="image"/>
+    <VueSkeletonLoader type="divider"/>
+    <VueSkeletonLoader type="text@3" :style="{marginBottom:'12px'}"/>
+    <VueSkeletonLoader type="chip@2" :duration="0.75"/>
+    <VueSkeletonLoader type="button@2" class="action-button"/>
+  </div>
+</template>
+
+<style scoped lang="scss">
+  .container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 12px;
+    border: 2px solid #0000001E;
+    border-radius: 0.25rem;
+
+    .avatar-container {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .action-button {
+      display: flex;
+      gap: 12px;
+      justify-content: end;
+    }
+  }
+
+</style>
+
+```
