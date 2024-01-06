@@ -255,7 +255,7 @@ It prepares the user for content while data is fetched from the server or loaded
         </tr>
         <tr>
             <td>
-                class-name
+                skeleton-class-name
             </td>
             <td align="center">
                <code>-</code>
