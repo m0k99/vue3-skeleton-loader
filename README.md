@@ -29,7 +29,7 @@ It prepares the user for content while data is fetched from the server or loaded
 
 ## Props
 
-### `Skeleton` only
+### `Skeleton`
 
 <table>
     <thead>
@@ -237,7 +237,7 @@ It prepares the user for content while data is fetched from the server or loaded
         </tr>
         <tr>
             <td>
-                style
+                skeleton-style
             </td>
             <td align="center">
                <code>-</code>
@@ -250,7 +250,7 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
         <tr>
             <td colspan="4">
-                An object that pass to skeleton to set custom style.
+                A custom style for individual skeleton elements.
             </td>
         </tr>
         <tr>
@@ -268,24 +268,10 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
         <tr>
             <td colspan="4">
-                An string that pass to skeleton to append class name.
+                A custom class name for individual skeleton elements is used alongside default class names 
+                <code>`v-skeleton-loader-${type}`</code> and <code>'vue-skeleton-loader-bone'</code>.
             </td>
         </tr>
-    </tbody>
-</table>
-
-### `Skeleton Container`
-
-<table>
-    <thead>
-        <tr>
-            <th>Prop</th>
-            <th>Values</th>
-            <th>Default</th>
-            <th>Type</th>
-        </tr>
-    </thead>
-    <tbody>
         <tr>
             <td>
                 container-style
@@ -301,12 +287,12 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
         <tr>
             <td colspan="4">
-                An object that pass to skeleton container to set custom style.
+                A custom style for the <code>div</code> that wraps the individual skeletal elements.
             </td>
         </tr>
         <tr>
             <td>
-                class
+                container-class-name
             </td>
             <td align="center">
                 -
@@ -319,11 +305,13 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
         <tr>
             <td colspan="4">
-                An string that pass to skeleton container to append class name.
+               A custom class name for the <code>div</code> that wraps the individual skeletal elements 
+               which are used alongside the default class <code>'vue-skeleton-loader'</code>
             </td>
         </tr>
     </tbody>
 </table>
+
 
 ## Example
 
