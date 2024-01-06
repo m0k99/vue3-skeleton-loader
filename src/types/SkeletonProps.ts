@@ -9,7 +9,9 @@ export interface SkeletonLoaderProps {
     height: string | number;
     width: string | number;
     direction: string;
-    containerStyle: object | any,
-    style: object,
-    class: string
+    containerClassName: string;
+    containerStyle: object | any;
+    skeletonStyle: object;
+    skeletonClassName: string;
+
 }

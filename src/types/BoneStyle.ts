@@ -5,7 +5,8 @@ export interface SkeletonStyle {
     '--borderRadius'?: string | number;
     '--height'?: string | number;
     '--width'?: string | number;
-    '--marginBottom'?: string | number;
+    '--margin'?: string | number;
+    '--animation'?: string;
 }
 
 export interface BoneProps {
@@ -16,4 +17,5 @@ export interface BoneProps {
     borderRadius: string | number;
     height: string | number;
     width: string | number;
+    animation: string;
 }
