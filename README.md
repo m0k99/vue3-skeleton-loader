@@ -1,9 +1,10 @@
-# Vue Content Skeleton Loader
 <div align="center">
     <h1 align="center">Vue Content Skeleton Loader</h1>
     <p align="center">
-        Make beautiful, animated loading skeletons that automatically adapt to your app.
+        Create visually appealing loading skeletons with animations that seamlessly integrate with your app's aesthetics
+        and provide a delightful user experience.
     </p>
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDVlanZiOGF3MWhkYXhtYXYzNms2MG9wZXBmdzd5MHl5a25na29vYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wNbcAM4P78WLJpDYZL/giphy.gif" alt="Animated GIF">
 </div>
 
 ## Basic Usage
@@ -11,7 +12,6 @@
 Install via one of:
 
 ```bash
-yarn add vue-content-loading-skeleton
 npm install vue-content-loading-skeleton
 ```
 
@@ -22,7 +22,10 @@ import 'vue-content-skeleton-loader/dist/style.css';
 <VueSkeletonLoader type="text"></VueSkeletonLoader>
 ```
 
-## Principles
+## Guid
+
+Skeleton loader provides a simple solution to provide loading variables in your application. \
+It prepares the user for content while data is fetched from the server or loaded asynchronously.
 
 ## Props
 
@@ -247,7 +250,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an object that pass to skeleton to set custom style.
+                An object that pass to skeleton to set custom style.
             </td>
         </tr>
         <tr>
@@ -265,7 +268,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an string that pass to skeleton to append class name.
+                An string that pass to skeleton to append class name.
             </td>
         </tr>
     </tbody>
@@ -298,7 +301,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an object that pass to skeleton container to set custom style.
+                An object that pass to skeleton container to set custom style.
             </td>
         </tr>
         <tr>
@@ -316,8 +319,12 @@ import 'vue-content-skeleton-loader/dist/style.css';
             </td>
         <tr>
             <td colspan="4">
-                an string that pass to skeleton container to append class name.
+                An string that pass to skeleton container to append class name.
             </td>
         </tr>
     </tbody>
 </table>
+
+## Example
+
+<VueSkeletonLoader type="text"></VueSkeletonLoader>
