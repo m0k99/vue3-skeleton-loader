@@ -92,7 +92,6 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
             <td align="center">
                 <code>wave</code>
-                <code>fade</code>
             </td>
             <td align="center">
                 <code>wave</code>
@@ -102,7 +101,8 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
         <tr>
             <td colspan="4">
-                Animation is a string, if it is empty, no animation will be shown.
+                The animation parameter is a string; if left empty, no animation will be displayed. 
+                To showcase a specific animation, provide its name and globally define the corresponding keyframes.
             </td>
         </tr>
         <tr>
@@ -274,7 +274,7 @@ It prepares the user for content while data is fetched from the server or loaded
         </tr>
         <tr>
             <td>
-                container-style
+                style
             </td>
             <td align="center">
                 -
@@ -292,7 +292,7 @@ It prepares the user for content while data is fetched from the server or loaded
         </tr>
         <tr>
             <td>
-                container-class-name
+                class
             </td>
             <td align="center">
                 -
