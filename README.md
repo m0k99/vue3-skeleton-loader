@@ -272,43 +272,6 @@ It prepares the user for content while data is fetched from the server or loaded
                 <code>`v-skeleton-loader-${type}`</code> and <code>'vue-skeleton-loader-bone'</code>.
             </td>
         </tr>
-        <tr>
-            <td>
-                style
-            </td>
-            <td align="center">
-                -
-            </td>
-            <td align="center">
-                {}
-            </td>
-            <td align="center">
-                <code>Object</code>
-            </td>
-        <tr>
-            <td colspan="4">
-                A custom style for the <code>div</code> that wraps the individual skeletal elements.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                class
-            </td>
-            <td align="center">
-                -
-            </td>
-            <td align="center">
-                ""
-            </td>
-            <td align="center">
-                <code>String</code>
-            </td>
-        <tr>
-            <td colspan="4">
-               A custom class name for the <code>div</code> that wraps the individual skeletal elements 
-               which are used alongside the default class <code>'vue-skeleton-loader'</code>
-            </td>
-        </tr>
     </tbody>
 </table>
 
