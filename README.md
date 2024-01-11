@@ -9,8 +9,7 @@
 
 ## Basic Usage
 
-Install via one of:
-
+Using [npm]
 ```bash
 npm install vue-content-loading-skeleton
 ```
@@ -22,7 +21,7 @@ import 'vue-content-skeleton-loader/dist/style.css';
 <VueSkeletonLoader type="text"></VueSkeletonLoader>
 ```
 
-## Guid
+## Introduction
 
 Skeleton loader provides a simple solution to provide loading variables in your application. \
 It prepares the user for content while data is fetched from the server or loaded asynchronously.
@@ -296,15 +295,10 @@ In the example below, the issue is demonstrated. To resolve it, you can either s
         <VueSkeletonLoader type="text" width="70px" height="6px"/>
       </div>
     </div>
-    <VueSkeletonLoader type="image"/>
-    <VueSkeletonLoader type="divider"/>
-    <VueSkeletonLoader type="text@3" :style="{marginBottom:'12px'}"/>
-    <VueSkeletonLoader type="chip@2"/>
-    <VueSkeletonLoader type="button@2" class="action-button"/>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
   .container {
     max-width: 400px;
     margin: 30px auto;
@@ -316,12 +310,6 @@ In the example below, the issue is demonstrated. To resolve it, you can either s
       display: flex;
       gap: 12px;
       align-items: center;
-    }
-
-    .action-button {
-      display: flex;
-      gap: 12px;
-      justify-content: end;
     }
   }
 
