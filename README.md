@@ -4,7 +4,7 @@
         Create visually appealing loading skeletons with animations that seamlessly integrate with your app's aesthetics
         and provide a delightful user experience.
     </p>
-    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA0Mjc0Mzh0cGU0c3RqYmt4ZXpxNzM0c3ppbzAycDJqZjZxZ29hYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WHayPi9eE3HW8pz7xa/giphy.gif" alt="Animated GIF" style="style="width: 500px; height: 528.634px; left: 0px; top: 0px; opacity: 1;">
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA0Mjc0Mzh0cGU0c3RqYmt4ZXpxNzM0c3ppbzAycDJqZjZxZ29hYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WHayPi9eE3HW8pz7xa/giphy.gif" alt="Animated GIF" style="width: 500px; height: 528.634px; left: 0px; top: 0px; opacity: 1;"/>
 </div>
 
 ## Basic Usage
@@ -274,7 +274,7 @@ It prepares the user for content while data is fetched from the server or loaded
         <tr>
             <td colspan="4">
                 A custom class name for individual skeleton elements is used alongside default class names 
-                <code>`v-skeleton-loader-${type}`</code> and <code>'vue-skeleton-loader-bone'</code>.
+                <code>v-skeleton-loader-${type}</code> and <code>vue-skeleton-loader-bone</code>.
             </td>
         </tr>
     </tbody>
