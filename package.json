@@ -1,9 +1,10 @@
 {
   "name": "vue-content-skeleton-loader",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.0",
   "type": "module",
   "author": "Mohammadreza Khalilikhorram",
+  "description": "Creating a loading animated and attractive skeleton",
   "keywords": [
     "skeleton-loader",
     "vue-skeleton-loader",
@@ -39,7 +40,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "sass": "^1.62.1",
     "vue": "^3.0.0"
   },
   "peerDependencies": {

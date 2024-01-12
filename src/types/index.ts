@@ -2,7 +2,7 @@ export interface SkeletonLoaderProps {
     loading: boolean;
     type: (string);
     animation: string;
-    duration: number;
+    duration: string;
     baseColor: string;
     highlightColor: string;
     borderRadius: string | number;
@@ -13,5 +13,12 @@ export interface SkeletonLoaderProps {
     containerStyle: object | any;
     skeletonStyle: object;
     skeletonClassName: string;
-
 }
+
+export interface SkeletonStyle {
+    'border-radius'?: string | number;
+    'height'?: string | number;
+    'width'?: string | number;
+    'margin'?: string | number;
+}
+

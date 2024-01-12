@@ -40,12 +40,5 @@ export const types = {
         width: '100%',
         borderRadius: '0',
         margin: '0 0 0.75rem'
-    },
-    chart: {
-        name: 'chart',
-        height: '0',
-        width: '0',
-        borderRadius: '0',
-        margin: '0 0 0.75rem'
-    },
+    }
 }

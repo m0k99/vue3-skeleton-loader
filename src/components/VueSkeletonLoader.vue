@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import {PropType, reactive} from "vue";
-import VueSkeletonLoaderBone from "./VueSkeletonLoaderBone.vue";
-import {computeComponents} from "@/util";
-import {SkeletonLoaderProps} from "@/types/SkeletonProps";
+import {computeComponents} from "@/util/skeletonChecker";
+import {SkeletonLoaderProps} from "@/types";
 import {makeStyle} from "@/composables/style";
 
 const props = defineProps({
@@ -22,9 +21,9 @@ const props = defineProps({
     default: 'wave'
   },
   duration: {
-    type: Number as PropType<SkeletonLoaderProps['duration']>,
+    type: String as PropType<SkeletonLoaderProps['duration']>,
     required: false,
-    default: 1.5
+    default: '1.5s'
   },
   baseColor: {
     type: String as PropType<SkeletonLoaderProps['baseColor']>,
@@ -77,13 +76,9 @@ if (bonesCount && bonesCount > 0) {
 
   const boneProps = {
     type: skeletonName,
-    duration: props.duration,
-    baseColor: props.baseColor,
-    highlightColor: props.highlightColor,
     borderRadius: props.borderRadius,
     height: props.height,
     width: props.width,
-    animation: props.animation
   }
   styles = makeStyle(boneProps)
 
@@ -93,11 +88,12 @@ if (bonesCount && bonesCount > 0) {
 
 <template>
   <div class="vue-skeleton-loader">
-    <VueSkeletonLoaderBone
+    <div
+      class="vue-skeleton-loader-bone"
+      ref="skeleton"
       v-if="loading"
       v-for="index in bonesCount"
       :key="index"
-      :style="skeletonStyle"
       :class="[
         `v-skeleton-loader-${skeletonName}`,
         {
@@ -107,9 +103,59 @@ if (bonesCount && bonesCount > 0) {
         animation,
         skeletonClassName
       ]"
-      :styles="styles"
+      :style="styles"
     >
       <slot></slot>
-    </VueSkeletonLoaderBone>
+    </div>
   </div>
 </template>
+
+<style scoped>
+
+.vue-skeleton-loader-bone {
+  position: relative;
+  overflow: hidden;
+  background: v-bind(baseColor);
+  display: block;
+}
+
+.vue-skeleton-loader-bone.animation-disabled::after {
+  animation: paused;
+}
+
+.vue-skeleton-loader-bone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation-name: v-bind(animation);
+  animation-duration: v-bind(duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-image: linear-gradient(
+      90deg,
+      transparent,
+      v-bind(highlightColor),
+      transparent
+  );
+  z-index: 1;
+}
+
+.vue-skeleton-loader-bone.wave::after {
+  animation-name: wave;
+  animation-direction: normal;
+}
+
+.vue-skeleton-loader-bone.rtl-direction::after {
+  animation-name: wave;
+  animation-direction: reverse;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+</style>
