@@ -13,13 +13,13 @@ import VueSkeletonLoader from "@/components/VueSkeletonLoader.vue";
     </div>
     <VueSkeletonLoader type="image"/>
     <VueSkeletonLoader type="divider"/>
-    <VueSkeletonLoader type="text@3" :style="{marginBottom:'12px'}"/>
-    <VueSkeletonLoader type="chip@2" :duration="0.75"/>
+    <VueSkeletonLoader type="text@3" style="margin-bottom: 12px;"/>
+    <VueSkeletonLoader type="chip@2" style="display: flex;"/>
     <VueSkeletonLoader type="button@2" class="action-button"/>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .container {
   max-width: 400px;
   margin: 30px auto;
@@ -27,17 +27,17 @@ import VueSkeletonLoader from "@/components/VueSkeletonLoader.vue";
   border: 2px solid #0000001E;
   border-radius: 0.25rem;
 
-  .avatar {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
 
-  .action-button {
-    display: flex;
-    gap: 12px;
-    justify-content: end;
-  }
+}
+.avatar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
+.action-button {
+  display: flex;
+  gap: 12px;
+  justify-content: end;
+}
 </style>
