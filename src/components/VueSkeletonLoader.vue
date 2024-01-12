@@ -103,7 +103,7 @@ if (bonesCount && bonesCount > 0) {
         animation,
         skeletonClassName
       ]"
-      :style="styles"
+      :style="{...styles,...skeletonStyle}"
     >
       <slot></slot>
     </div>
@@ -132,10 +132,10 @@ if (bonesCount && bonesCount > 0) {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   background-image: linear-gradient(
-      90deg,
-      transparent,
-      v-bind(highlightColor),
-      transparent
+    90deg,
+    transparent,
+    v-bind(highlightColor),
+    transparent
   );
   z-index: 1;
 }
