@@ -9,9 +9,15 @@
 
 ## Basic Usage
 
-Using [npm]
+Using [npm](https://npmjs.com/)
+
 ```bash
 npm install vue-content-loading-skeleton
+```
+
+Using [yarn](https://yarnpkg.com/)
+```bash
+yarn add vue-content-loading-skeleton
 ```
 
 ```tsx
@@ -100,7 +106,7 @@ It prepares the user for content while data is fetched from the server or loaded
             </td>
         <tr>
             <td colspan="4">
-                The animation parameter is a string; if left empty, no animation will be displayed. 
+                The animation parameter is a string; if left empty string, no animation will be displayed. 
                 To showcase a specific animation, provide its name and globally define the corresponding keyframes.
             </td>
         </tr>
@@ -274,7 +280,13 @@ It prepares the user for content while data is fetched from the server or loaded
     </tbody>
 </table>
 
+## Examples 
 
+### Custom animation
+
+To set a custom animation for the <code>VueSkeletonLoader</code>, first, register the animation globally, then pass its 
+name to the component using the <code>animation</code> prop.
+ 
 ## Troubleshooting
 
 ### Skeleton gets width 0 when parent display is <code>flex</code>
@@ -316,3 +328,8 @@ In the example below, the issue is demonstrated. To resolve it, you can either s
 </style>
 
 ```
+
+
+## License
+
+[MIT](https://opensource.org/license/mit/)
