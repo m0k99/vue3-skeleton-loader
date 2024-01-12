@@ -1,21 +1,25 @@
 {
   "name": "vue-content-skeleton-loader",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
+  "author": "Mohammadreza Khalilikhorram",
   "keywords": [
     "skeleton-loader",
     "vue-skeleton-loader",
+    "loading-skeleton",
     "skeleton-ui",
     "vue3",
     "vue",
     "vuejs",
-    "nuxt.js"
+    "nuxt.js",
+    "nuxt3"
   ],
   "files": [
     "dist",
     "src/components/"
   ],
+  "license": "MIT",
   "main": "./dist/vue-content-skeleton-loader.umd.cjs",
   "module": "./dist/vue-content-skeleton-loader.js",
   "exports": {
