@@ -75,7 +75,6 @@ It prepares the user for content while data is fetched from the server or loaded
                 <code>image</code>
                 <code>button</code>
                 <code>chip</code>
-                <code>chip</code>
                 <code>divider</code>
             </td>
             <td align="center">
