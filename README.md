@@ -1,5 +1,5 @@
 <div align="center">
-    <h1 align="center">Vue Content Skeleton Loader</h1>
+    <h1 align="center">Vue3 Skeleton Loader</h1>
     <p align="center">
         Creating a loading animation with an attractive appearance and in line with the app design, for a pleasant user experience.
     </p>
@@ -11,17 +11,17 @@
 Using [npm](https://npmjs.com/)
 
 ```bash
-npm install vue-content-loading-skeleton
+npm install vue3-skeleton-loader
 ```
 
 Using [yarn](https://yarnpkg.com/)
 ```bash
-yarn add vue-content-loading-skeleton
+yarn add vue3-skeleton-loader
 ```
 
 ```tsx
-import VueSkeletonLoader from 'vue-content-skeleton-loader';
-import 'vue-content-skeleton-loader/dist/style.css';
+import VueSkeletonLoader from 'vue3-skeleton-loader';
+import 'vue3-skeleton-loader/dist/style.css';
 
 <VueSkeletonLoader type="text"></VueSkeletonLoader>
 ```
@@ -293,8 +293,8 @@ In the example below, the issue is demonstrated. To resolve it, you can either s
 ```vue
 
 <script setup lang="ts">
-  import VueSkeletonLoader from 'vue-content-skeleton-loader';
-  import 'vue-content-skeleton-loader/dist/style.css';
+  import VueSkeletonLoader from 'vue3-skeleton-loader';
+  import 'vue3-skeleton-loader/dist/style.css';
 </script>
 <template>
   <div class="container">

@@ -6,10 +6,11 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [vue(), dts()],
   build: {
+    outDir: "dist",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "VueContentSkeletonLoader",
-      fileName: "vue-content-skeleton-loader"
+      name: "index",
+      fileName: "index"
     },
     rollupOptions: {
       external: ["vue"],
