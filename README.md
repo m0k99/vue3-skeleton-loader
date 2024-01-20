@@ -23,7 +23,7 @@ yarn add vue3-skeleton-loader
 import VueSkeletonLoader from 'vue3-skeleton-loader';
 import 'vue3-skeleton-loader/dist/style.css';
 
-<VueSkeletonLoader type="text"></VueSkeletonLoader>
+<VueSkeletonLoader type="image@2"></VueSkeletonLoader>
 ```
 
 ## Introduction

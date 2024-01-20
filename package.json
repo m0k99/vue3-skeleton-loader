@@ -1,7 +1,7 @@
 {
   "name": "vue3-skeleton-loader",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "author": "Mohammadreza Khalilikhorram",
   "description": "Creating a loading animated and attractive skeleton",
@@ -10,6 +10,8 @@
     "vue-skeleton-loader",
     "loading-skeleton",
     "skeleton-ui",
+    "placeholder",
+    "loader",
     "vue3",
     "vue",
     "vuejs",
