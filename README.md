@@ -6,6 +6,8 @@
     <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA0Mjc0Mzh0cGU0c3RqYmt4ZXpxNzM0c3ppbzAycDJqZjZxZ29hYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WHayPi9eE3HW8pz7xa/giphy.gif" alt="Animated GIF" style="width: 500px; height: 528.634px; left: 0px; top: 0px; opacity: 1;"/>
 </div>
 
+
+
 ## Basic Usage
 
 Using [npm](https://npmjs.com/)
@@ -19,12 +21,15 @@ Using [yarn](https://yarnpkg.com/)
 yarn add vue3-skeleton-loader
 ```
 
+
+Using loader in your <code>.vue</code> file
 ```tsx
 import VueSkeletonLoader from 'vue3-skeleton-loader';
 import 'vue3-skeleton-loader/dist/style.css';
 
 <VueSkeletonLoader type="image@2"></VueSkeletonLoader>
 ```
+
 
 ## Introduction
 
@@ -124,6 +129,30 @@ It prepares the user for content while data is fetched from the server or loaded
         <tr>
             <td colspan="4">
                 The duration of the animation.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                timingFunction
+            </td>
+            <td align="center">
+                Common values for the timing-function property include:
+                <code>ease</code>
+                <code>linear</code>
+                <code>ease-in</code>
+                <code>ease-out</code>
+                <code>ease-in-out</code>
+                ...
+            </td>
+            <td align="center">
+               <code>linear</code>
+            </td>
+            <td align="center">
+                <code>String</code>
+            </td>
+        <tr>
+            <td colspan="4">
+               The timing-function property in CSS is used to specify the speed curve of an animation.
             </td>
         </tr>
         <tr>
@@ -278,6 +307,8 @@ It prepares the user for content while data is fetched from the server or loaded
     </tbody>
 </table>
 
+
+
 ## Examples 
 
 ### Custom animation
@@ -326,7 +357,6 @@ In the example below, the issue is demonstrated. To resolve it, you can either s
 </style>
 
 ```
-
 
 ## License
 

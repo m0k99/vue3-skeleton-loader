@@ -8,6 +8,7 @@ export interface SkeletonLoaderProps {
     borderRadius: string | number;
     height: string | number;
     width: string | number;
+    timingFunction: string;
     direction: string;
     containerClassName: string;
     containerStyle: object | any;
