@@ -50,6 +50,11 @@ const props = defineProps({
     required: false,
     default: ''
   },
+  timingFunction: {
+    type: String as PropType<SkeletonLoaderProps['timingFunction']>,
+    required: false,
+    default: 'linear'
+  },
   direction: {
     type: String as PropType<SkeletonLoaderProps['direction']>,
     required: false,
@@ -130,7 +135,7 @@ if (bonesCount && bonesCount > 0) {
   animation-name: v-bind(animation);
   animation-duration: v-bind(duration);
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: v-bind(timingFunction);
   background-image: linear-gradient(
     90deg,
     transparent,
