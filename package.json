@@ -1,7 +1,7 @@
 {
   "name": "vue3-skeleton-loader",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "author": "Mohammadreza Khalilikhorram",
   "description": "Creating a loading animated and attractive skeleton",
