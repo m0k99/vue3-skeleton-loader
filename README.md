@@ -25,7 +25,6 @@ yarn add vue3-skeleton-loader
 Using loader in your <code>.vue</code> file
 ```tsx
 import VueSkeletonLoader from 'vue3-skeleton-loader';
-import 'vue3-skeleton-loader/dist/style.css';
 
 <VueSkeletonLoader type="image@2"></VueSkeletonLoader>
 ```
@@ -325,7 +324,6 @@ In the example below, the issue is demonstrated. To resolve it, you can either s
 
 <script setup lang="ts">
   import VueSkeletonLoader from 'vue3-skeleton-loader';
-  import 'vue3-skeleton-loader/dist/style.css';
 </script>
 <template>
   <div class="container">
